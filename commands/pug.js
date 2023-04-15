@@ -8,6 +8,8 @@ const {
   EmbedBuilder,
 } = require("discord.js");
 
+const { channelId } = require("../config.json");
+
 const lobbies = {};
 
 module.exports = {
@@ -89,7 +91,7 @@ module.exports = {
     await interaction.reply({ content: "OK", ephemeral: true });
     await interaction.deleteReply();
 
-    const channel = interaction.guild.channels.cache.get("1090084718906716261");
+    const channel = interaction.guild.channels.cache.get(channelId);
 
     let message = await channel.send({
       embeds: [embed],
