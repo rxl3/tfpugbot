@@ -16,8 +16,7 @@ module.exports = {
     .setDescription("Roll captains")
     .addIntegerOption((option) =>
       option.setName("numplayers").setDescription("Number of players")
-    )
-    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
+    ),
   async execute(interaction) {
     let index = 0;
     const lobbyKeys = Object.keys(lobbies);
